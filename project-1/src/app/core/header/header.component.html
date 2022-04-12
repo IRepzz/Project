@@ -1,6 +1,21 @@
-<div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+<div class="topnav" >
+    <a class="active" href="home">Home</a>
+    <a href="books">Books</a>
+    <a href="market">Market</a>
+   
+  
+  <div class="mini-nav" *ngIf="!isLoged">
+    <li>
+      <a (click)="loginHandler()">Login</a>
+      <a href="#">Register</a>
+    </li>
+    
+  </div>
+  <div class="mini-nav" *ngIf="isLoged">
+    <li>
+       <a href="catalog">My Books</a>
+      <a (click)="logoutHandler()">LogOut</a>
+    </li>
+    
+  </div>
   </div>
